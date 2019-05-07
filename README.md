@@ -18,6 +18,7 @@
 * Date          "01/10/2030"
 * Hour          "22:00"
 * Address       "2 Hight Street"
+* City          "Plymouth"
 * PosteCode     "PL1 2AB"
 * Genre         "Funky House"
 * Description   "3th Annual Festival of House Music."
