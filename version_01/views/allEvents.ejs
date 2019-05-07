@@ -12,9 +12,11 @@
 <h1>This is the All Events Page...</h1>
 
 <% allEvents.forEach((singlEvent)=> { %>
-    <li>
-        <%= singlEvent.name %>
-    </li>
+    <div>
+        <h2><%= singlEvent.name %></h2>
+        <img src="<%= singlEvent.image %>">        
+    </div>
+    
 <% }); %>
 
 <hr>
