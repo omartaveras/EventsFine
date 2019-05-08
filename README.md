@@ -20,6 +20,8 @@
 ###### Style
 * Create header and footer partials
 * Add in Bootstrap
+* Better header and title
+* Make all events display in a grid(Div)
 
 - [x] Bootstrap
 - [ ] Semantic

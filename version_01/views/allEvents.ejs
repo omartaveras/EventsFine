@@ -2,20 +2,38 @@
 <%# Add styling bootstrap head and footer %>
 <% include partials/header %>
 
-<h1>This is the All Events Page...</h1>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>This is FINE...</h1>
+            <p>Welcome to Find Internal Nighht Event in your Town.</p>
+            <p>
+                <a class="btn btn-warning" href="">Find Event in Town</a>
+                <a class="btn btn-info" href="/allevents/new">Add New Event In Your Town!</a>            
+            </p>
+        </div>
+    </header>
 
-<a href="/allevents/new">Add New Event In Your Town!</a>
 
-<% allEvents.forEach((singlEvent)=> { %>
-    <div>
-        <h2><%= singlEvent.name %></h2>
-        <h3><%= singlEvent.genre %></h3>
-        <img src="<%= singlEvent.image %>">        
-    </div>
     
-<% }); %>
+    <div class="row">
+        <% allEvents.forEach((singlEvent)=> { %>
+            <div class="col-md-3 col-sm-6">
+                
+                <div class="card-body">
+                    <h2 class="card-title"><%= singlEvent.name %></h2>
+                    <h3 class="card-text"><%= singlEvent.genre %></h3>
+                </div>
+                
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="<%= singlEvent.image %>"> 
+                </div>       
+            </div>
+            
+        <% }); %>
+    </div>
 
-<hr>
-<a href="/">Back Home</a>
-
+    <hr>
+    <a href="/">Back Home</a>
+</div>
 <% include partials/footer %>
