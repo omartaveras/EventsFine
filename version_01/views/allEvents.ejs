@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
+
+<%# Add styling bootstrap head and footer %>
+<% include partials/header %>
 
 <h1>This is the All Events Page...</h1>
 
 <% allEvents.forEach((singlEvent)=> { %>
     <div>
         <h2><%= singlEvent.name %></h2>
+        <h3><%= singlEvent.genre %></h3>
         <img src="<%= singlEvent.image %>">        
     </div>
     
@@ -22,6 +16,4 @@
 <hr>
 <a href="/">Back Home</a>
 
-
-</body>
-</html>
+<% include partials/footer %>

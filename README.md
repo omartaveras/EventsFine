@@ -9,14 +9,20 @@
 ********************************
 
 ## Step #1
+###### Backend
 - Add landing/home page
 - Add allEvents page that lists all events
+- Setup new Event POST route
+- Add in body-parser
+- Setup route to show form
+- Add basic unstyled from
 
 ###### Style
-*
-* 
+* Create header and footer partials
+* Add in Bootstrap
+
 - [x] Bootstrap
-- [] Semantic
+- [ ] Semantic
 
 
 ## Each Event has:(Example)
@@ -28,7 +34,7 @@
 * City          "Plymouth"
 * PosteCode     "PL1 2AB"
 * Genre         "Funky House"
-* Description   "3th Annual Festival of House Music."
+* Description   "3rd Annual Festival of House Music."
 * Cost          "$15,00/links"
 * Images        "Cover/link" 
 
@@ -38,7 +44,7 @@
 * Where is  the dir?
 
 * Last update /mp33.. .
-This formatting syntax: [GitHub Pages](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
+- This formatting syntax: [GitHub Pages](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
  
 
 # How to start the server...
