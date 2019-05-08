@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //setup EJS
 app.set("view engine", "ejs")
 
-//Array All Events 
+//Array All Events (example event) 
 var allEvents = [
         {name: "MegaBash 2030", genre: "House", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/00_MTVCLUB_LOGO_black.png"},
         {name: "Yo! Mtv Raps", genre: "Hip Hop", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/snoochie-768x432.png"},
@@ -16,7 +16,7 @@ var allEvents = [
     ];
 
 
-// A sample route
+// A sample route Home page
 app.get("/", (req, res) => {
     res.render("home");
 });
