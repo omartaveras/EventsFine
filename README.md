@@ -12,6 +12,13 @@
 - Add landing/home page
 - Add allEvents page that lists all events
 
+###### Style
+*
+* 
+- [x] Bootstrap
+- [] Semantic
+
+
 ## Each Event has:(Example)
 * Name          "MegaBash 2030"
 * Location      "Pryzm"
@@ -31,6 +38,8 @@
 * Where is  the dir?
 
 * Last update /mp33.. .
+This formatting syntax: [GitHub Pages](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
+ 
 
 # How to start the server...
 - install
