@@ -12,7 +12,8 @@ app.set("view engine", "ejs")
 var allEvents = [
         {name: "MegaBash 2030", genre: "House", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/00_MTVCLUB_LOGO_black.png"},
         {name: "Yo! Mtv Raps", genre: "Hip Hop", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/snoochie-768x432.png"},
-        {name: "R3wire & Varski", genre: "EDM", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/rewirevarski-768x432.jpg"}
+        {name: "R3wire & Varski", genre: "EDM", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/rewirevarski-768x432.jpg"},
+        {name: "The Amazons", genre: "Rock", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/the_amazons-768x432.jpg"}
     ];
 
 

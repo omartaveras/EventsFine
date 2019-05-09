@@ -44,12 +44,14 @@
 
 ## Step #2
 * Where is  the dir?
-
-* Last update /mp33.. .
+*
+*********
+####### Links
 - This formatting syntax: [GitHub Pages](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
  
 
 # How to start the server...
-- install
-> npm init
-> npm install --save express ejs 
+- Install
+> npm install
+> run node
+> ;) 
