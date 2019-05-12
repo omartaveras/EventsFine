@@ -2,6 +2,14 @@
 <%# Add styling bootstrap head and footer %>
 <% include partials/header %>
 
+<!-- Image and text -->
+<nav class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="..." width="30" height="30" class="d-inline-block align-top" alt="">
+      FINE
+    </a>
+  </nav>
+
 <div class="container">
     <header class="jumbotron">
         <div class="container">
@@ -31,11 +39,14 @@
 
             <div class="card" style="width: 14rem;">
                 <h7 class="card-title card-header"><%= singlEvent.genre %></h7>
-                <img src="<%= singlEvent.image %>" class="card-img-top" alt="...">
+                <img src="<%= singlEvent.image %>" class="card-img-top" alt="cover">
                 <div class="card-body">
                   <h5 class="card-title"><%= singlEvent.name %></h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">More Info</a>
+                  <a href="" class="badge badge-primary">More Info</a>
+                  <br>
+                  <a href="" class="badge badge-light">Pryzm</a>
+                  <a class="badge badge-info">25 June 2019</a>
                 </div>
               </div>
             
