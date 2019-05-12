@@ -1,15 +1,7 @@
-
 <%# Add styling bootstrap head and footer %>
 <% include partials/header %>
 
-<!-- Image and text -->
-<nav class="navbar fixed-top navbar-light bg-light">
-    <a class="navbar-brand" href="/">
-      <img src="https://mirrors.creativecommons.org/presskit/icons/remix.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      FINE
-    </a>
-  </nav>
-
+<!-- Jumbotron -->
 <div class="container">
     <header class="jumbotron">
         <div class="container">
@@ -17,40 +9,30 @@
             <p>Welcome to Find Internal Nighht Event in your Town.</p>
             <p>
                 <a class="btn btn-warning" href="">Find Event in Town</a>
-                <a class="btn btn-info" href="/allevents/new">Add New Event In Your Town!</a>            
+                <a class="btn btn-info" href="/allevents/new">Add New Event In Your Town!</a>
             </p>
         </div>
     </header>
 
-
-    
-    <div class="row">
+    <!-- List of Cards -->
+    <div class="row text-center">
         <% allEvents.forEach((singlEvent)=> { %>
-            <!-- <div class="col-md-3 col-sm-6">                
-                <div class="card-body">
-                    <h2 class="card-title"><%= singlEvent.name %></h2>
-                    <h3 class="card-text"><%= singlEvent.genre %></h3>
-                </div>
-                
-                <div class="card" style="width: 18rem">
-                    <img class="card-img-top" src="<%= singlEvent.image %>"> 
-                </div>       
-            </div> -->
-            <div class="row col-sm-3">
+        <div class="col-md-3 col-sm-6">
             <div class="card" style="width: 14rem;">
                 <h7 class="card-title card-header"><%= singlEvent.genre %></h7>
                 <img src="<%= singlEvent.image %>" class="card-img-top" alt="cover">
                 <div class="card-body">
-                  <h5 class="card-title"><%= singlEvent.name %></h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="" class="badge badge-primary">More Info</a>
-                  <br>
-                  <a href="" class="badge badge-light">Pryzm</a>
-                  <a class="badge badge-info">25 June 2019</a>
+                    <h5 class="card-title"><%= singlEvent.name %></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="" class="badge badge-primary">More Info</a>
+                    <br>
+                    <a href="" class="badge badge-light">Pryzm</a>
+                    <a class="badge badge-info">25 June 2019</a>
                 </div>
-              </div>
             </div>
-            
+        </div>
+
         <% }); %>
     </div>
 

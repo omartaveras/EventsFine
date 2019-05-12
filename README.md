@@ -23,7 +23,7 @@
 * Better header and title
 * Make all events display in a grid(Div)
 * Add Navbar 
-* Style the new Event form
+* Style the new Event form(Login, Sign Up and Logout.. .)
 - [x] Bootstrap
 - [ ] Semantic
 
