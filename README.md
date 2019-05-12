@@ -22,7 +22,8 @@
 * Add in Bootstrap
 * Better header and title
 * Make all events display in a grid(Div)
-
+* Add Navbar 
+* Style the new Event form
 - [x] Bootstrap
 - [ ] Semantic
 
