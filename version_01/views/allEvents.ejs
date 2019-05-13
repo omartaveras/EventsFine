@@ -8,21 +8,21 @@
             <h1>This is FINE...</h1>
             <p>Welcome to Find Internal Nighht Event in your Town.</p>
             <p>
-                <a class="btn btn-info" href="/allevents/new">Add New Event In Your Town!</a>
+                <a class="btn btn-info btn-lg" href="/allevents/new">Add New Event In Your Town!</a>
                 <a class="btn btn-warning" href="">Find Event in Town</a>
             </p>
         </div>
     </header>
 
     <!-- List of Cards -->
-    <div class="row text-center">
+    <div class="row text-center; style="display:flex; flex-wrap: wrap;">
         <% allEvents.forEach((singlEvent)=> { %>
         <div class="col-md-3 col-sm-6">
-            <div class="card" style="width: 14rem;">
+            <div class="card style="width: 14rem;">
                 <h7 class="card-title card-header"><%= singlEvent.genre %></h7>
-                <img src="<%= singlEvent.image %>" class="card-img-top" alt="cover">
+                <img src="<%= singlEvent.image %>" class="card-img-top img-thumbnail" alt="cover">
                 <div class="card-body">
-                    <h5 class="card-title"><%= singlEvent.name %></h5>
+                    <h5 class="card-title caption"><%= singlEvent.name %></h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <a href="" class="badge badge-primary">More Info</a>

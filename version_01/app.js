@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //setup EJS
 app.set("view engine", "ejs")
 
-//Array All Events (example event) 
+//Array for All Events (example event) 
 var allEvents = [
         {name: "MegaBash 2030", genre: "House", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/00_MTVCLUB_LOGO_black.png"},
         {name: "Yo! Mtv Raps", genre: "Hip Hop", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/snoochie-768x432.png"},
@@ -48,3 +48,9 @@ app.get("/allevents/new", (req, res) => {
 
 // Start the Express server
 app.listen(3000, () => console.log('Server running on port 3000!'));
+
+
+// Start server in deploying mode...
+// app.listen(process.env.PORT, process.env.IP,() => {
+//     console.log('Server running on Deploying mode')
+// });    
