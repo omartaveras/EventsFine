@@ -2,15 +2,43 @@
 <% include partials/header %>
 
 
-<h1>Create a new Event</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="text-align: center">Create a new Event</h1>
+            <div style="width: 40%; margin: 0 auto;">
+                <form action="/allevents" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="genre" placeholder="genre">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="image" placeholder="image url">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block">Create</button>
+                    </div>
+                </form>
+                <a href="/allevents">Go Back</a>
+            </div>
+        </div>       
+    </div> 
+</div>
 
-<form action="/allevents" method="POST">
-    <input type="text" name="name" placeholder="name">
-    <input type="text" name="genre" placeholder="genre">
-    <input type="text" name="image" placeholder="image url">
-    <button>Create</button>
 
-</form>
-<a href="/allevents">Go Back</a>
+        <!-- New Form -->
+        <!-- <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="text" class="form-control" id="inputEmail4" placeholder="text">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                </div> -->
+
 
 <% include partials/footer %>
