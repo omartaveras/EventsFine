@@ -15,7 +15,11 @@
 - Setup new Event POST route
 - Add in body-parser
 - Setup route to show form
-- Add basic unstyled from
+- Add basic unstyled form
+## Step #2
+- Install and configure Mongoose
+- Setup Event Model
+- Use Event Model inside of our routes
 
 ###### Style
 * Create header and footer partials
@@ -24,13 +28,16 @@
 * Make all events display in a grid(Div)
 * Add Navbar 
 * Style the new Event form(Login, Sign Up and Logout.. .)
+## Style #2
+* Add Home Page
+
 - [x] Bootstrap
 - [ ] Semantic
 
 
 ## Each Event has:(Example)
 * Name          "MegaBash 2030"
-* Location      "Pryzm"
+* Location      "Pryzm/link Home"
 * Date          "01/10/2030"
 * Hour          "22:00"
 * Address       "2 Hight Street"
@@ -56,4 +63,4 @@ https://help.github.com/en/articles/working-with-advanced-formatting
 - Install
 > - npm install
 > - run node
-> ;) 
+> - ;) 
