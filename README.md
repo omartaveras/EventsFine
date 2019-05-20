@@ -21,6 +21,10 @@
 - Install and configure Mongoose
 - Setup Event Model
 - Use Event Model inside of our routes
+- Review teh RESTful routes we have seen so far
+- Add description to our event model
+- Show db.collection.drop()
+- Add a show route/template
 
 ###### Style
 * Create header and footer partials

@@ -15,6 +15,7 @@ app.set("view engine", "ejs")
 const eventSchema = new mongoose.Schema({
     name: String,
     genre: String,
+    description: String,
     image: String
 });
 const Event = mongoose.model("Event", eventSchema);
@@ -24,6 +25,7 @@ const Event = mongoose.model("Event", eventSchema);
 //     {
 //         name: "R3wire & Varski",
 //         genre: "EDM",
+//         description: "YO! MTV Raps: Plymouth is a one-off special live event show that celebrates unique style and sound, and reminds the rest of the world why Great Britain is currently leading the way when it comes to creativity in rap and hip-hop music today. The event will be filmed in Plymouth’s unique venue The Hub on Friday 7th June and will bring the UK’s finest together to perform, support and celebrate one another.",
 //         image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/rewirevarski-768x432.jpg"
 //     }, (err, event) => {
 //         if (err) {
@@ -51,7 +53,7 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-//All Events info
+//All Events info, INDEX
 app.get("/allevents", (req, res) => {
     //Get all events from DB
     Event.find({}, (err, allEvents) => {
@@ -63,7 +65,7 @@ app.get("/allevents", (req, res) => {
     });
 });
 
-//Setup new Event POST route
+//Setup and Create a new Event on DB
 app.post("/allevents", (req, res) => {
     //Get data from form and add to all events in to array[allEvents]
     var name = req.body.name;
@@ -71,21 +73,33 @@ app.post("/allevents", (req, res) => {
     var image = req.body.image;
     var newEvent = { name: name, genre: genre, image: image }
     //create a new Event and save to Db
-    Event.create(newEvent, (err, newlyCreated)=>{
-        if(err){
+    Event.create(newEvent, (err, newlyCreated) => {
+        if (err) {
             console.log(err);
-        }else{
+        } else {
             //Redirect back to all events page.
             res.redirect("/allevents");
         }
     });
 });
 
-// Create a new event
+// Show Form to Create a new Event
 app.get("/allevents/new", (req, res) => {
     res.render("newevent.ejs");
 });
 
+// Show more info about one Event(Show.ejs)
+app.get("/allevents/:id", (req, res) => {
+    //Find the event with provided ID
+    Event.FindById(req.params.id, (err, foundEvent) => {
+        if (err) {
+            console.log(err);
+        } else {
+            //render show template with that event
+            res.render("show");
+        }
+    });
+});
 
 // Start the Express server
 app.listen(3000, () => console.log('Server running on port 3000!'));
