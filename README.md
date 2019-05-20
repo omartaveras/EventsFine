@@ -8,15 +8,16 @@
 **          FINE              **
 ********************************
 
-## Step #1
-###### Backend
+
+ ## Backend
+ ###### Step #1
 - Add landing/home page
 - Add allEvents page that lists all events
 - Setup new Event POST route
 - Add in body-parser
 - Setup route to show form
 - Add basic unstyled form
-## Step #2
+##### Step #2
 - Install and configure Mongoose
 - Setup Event Model
 - Use Event Model inside of our routes
@@ -28,7 +29,7 @@
 * Make all events display in a grid(Div)
 * Add Navbar 
 * Style the new Event form(Login, Sign Up and Logout.. .)
-## Style #2
+##### Style #2
 * Add Home Page
 
 - [x] Bootstrap

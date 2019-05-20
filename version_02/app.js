@@ -1,20 +1,49 @@
-const  express = require("express"),
-           app = express(),
-    bodyParser = require("body-parser");
+const express = require("express"),
+    app = express(),
+    bodyParser = require("body-parser"),
+    mongoose = require("mongoose");
 
 
+// connect mongoDB with mongoose
+mongoose.connect('mongodb://localhost/eventsAPP_v2', { useNewUrlParser: true });
 //setup body parser
-app.use(bodyParser.urlencoded({extended: true}));    
+app.use(bodyParser.urlencoded({ extended: true }));
 //setup EJS
 app.set("view engine", "ejs")
 
+//Schema setup for DB
+const eventSchema = new mongoose.Schema({
+    name: String,
+    genre: String,
+    image: String
+});
+const Event = mongoose.model("Event", eventSchema);
+
+//Create event into the DB
+// Event.create(
+//     {
+//         name: "R3wire & Varski",
+//         genre: "EDM",
+//         image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/rewirevarski-768x432.jpg"
+//     }, (err, event) => {
+//         if (err) {
+//             console.log(err);
+
+//         } else {
+//             console.log("Newly created Event");
+//             console.log(event);
+//         }
+//     }
+// );
+
+
 //Array for All Events (example event) 
-var allEvents = [
-        {name: "MegaBash 2030", genre: "House", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/00_MTVCLUB_LOGO_black.png"},
-        {name: "Yo! Mtv Raps", genre: "Hip Hop", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/snoochie-768x432.png"},
-        {name: "R3wire & Varski", genre: "EDM", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/rewirevarski-768x432.jpg"},
-        {name: "The Amazons", genre: "Rock", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/the_amazons-768x432.jpg"}
-    ];
+// var allEvents = [
+//     { name: "MegaBash 2030", genre: "House", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/00_MTVCLUB_LOGO_black.png" },
+//     { name: "Yo! Mtv Raps", genre: "Hip Hop", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/snoochie-768x432.png" },
+//     { name: "R3wire & Varski", genre: "EDM", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/rewirevarski-768x432.jpg" },
+//     { name: "The Amazons", genre: "Rock", image: "http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/the_amazons-768x432.jpg" }
+// ];
 
 
 // A sample route Home page
@@ -23,9 +52,16 @@ app.get("/", (req, res) => {
 });
 
 //All Events info
-app.get("/allevents", (req, res) => {    
-     res.render("allEvents", {allEvents: allEvents});
-}); 
+app.get("/allevents", (req, res) => {
+    //Get all events from DB
+    Event.find({}, (err, allEvents) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("allEvents", { allEvents: allEvents });
+        }
+    });
+});
 
 //Setup new Event POST route
 app.post("/allevents", (req, res) => {
@@ -33,11 +69,16 @@ app.post("/allevents", (req, res) => {
     var name = req.body.name;
     var genre = req.body.genre;
     var image = req.body.image;
-    var newEvent = {name: name, genre: genre, image: image}
-    allEvents.push(newEvent);
-    //Redirect back to all events page.
-    res.redirect("/allevents");
-
+    var newEvent = { name: name, genre: genre, image: image }
+    //create a new Event and save to Db
+    Event.create(newEvent, (err, newlyCreated)=>{
+        if(err){
+            console.log(err);
+        }else{
+            //Redirect back to all events page.
+            res.redirect("/allevents");
+        }
+    });
 });
 
 // Create a new event
