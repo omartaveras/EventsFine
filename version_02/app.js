@@ -70,8 +70,9 @@ app.post("/allevents", (req, res) => {
     //Get data from form and add to all events in to array[allEvents]
     var name = req.body.name;
     var genre = req.body.genre;
+    var desc = req.body.description;
     var image = req.body.image;
-    var newEvent = { name: name, genre: genre, image: image }
+    var newEvent = { name: name, genre: genre, description: desc, image: image }
     //create a new Event and save to Db
     Event.create(newEvent, (err, newlyCreated) => {
         if (err) {
@@ -91,12 +92,12 @@ app.get("/allevents/new", (req, res) => {
 // Show more info about one Event(Show.ejs)
 app.get("/allevents/:id", (req, res) => {
     //Find the event with provided ID
-    Event.FindById(req.params.id, (err, foundEvent) => {
+    Event.findById(req.params.id, (err, foundEvent) => {
         if (err) {
             console.log(err);
         } else {
             //render show template with that event
-            res.render("show");
+            res.render("show", {event: foundEvent});
         }
     });
 });
