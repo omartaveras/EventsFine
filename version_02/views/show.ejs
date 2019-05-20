@@ -3,7 +3,17 @@
 
 <h1>Show Template.. .</h1>
 
-<h7 class="card-title card-header"><%= singlEvent.genre %></h7>
+<div class="container">
+    <div class="col-md-8">        
+        <h1 class="card-title caption"><%= event.name %></h1>
+        <h7 class="card-title card-header"><%= event.genre %></h7>
+        <img src="<%= event.image %>" class="card-img-top img-thumbnail" alt="cover">
+        
+        <p class="card-text"><%= event.description %></p>
+    </div>
+    <a href="/allevents">Go Back </a>
+</div>
+
 
 
 
