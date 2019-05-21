@@ -4,8 +4,11 @@ const express = require("express"),
     mongoose = require("mongoose");
 
 
-// connect mongoDB with mongoose
-mongoose.connect('mongodb://localhost/eventsAPP_v2', { useNewUrlParser: true });
+// connect mongoDB with mongoose in Loacal
+//mongoose.connect('mongodb://localhost/eventsAPP_v2', { useNewUrlParser: true });
+
+//Connection to Atlas MongoDB
+mongoose.connect("mongodb+srv://deckdb:*****@cluster0-x95un.mongodb.net/eventsAPP_v2?retryWrites=true", { useNewUrlParser: true });
 //setup body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 //setup EJS
@@ -16,6 +19,7 @@ const eventSchema = new mongoose.Schema({
     name: String,
     genre: String,
     description: String,
+    date: Date,
     image: String
 });
 const Event = mongoose.model("Event", eventSchema);
