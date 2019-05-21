@@ -5,10 +5,10 @@ const express = require("express"),
 
 
 // connect mongoDB with mongoose in Loacal
-//mongoose.connect('mongodb://localhost/eventsAPP_v2', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/eventsAPP_v2', { useNewUrlParser: true });
 
 //Connection to Atlas MongoDB
-mongoose.connect("mongodb+srv://deckdb:*****@cluster0-x95un.mongodb.net/eventsAPP_v2?retryWrites=true", { useNewUrlParser: true });
+//mongoose.connect("mongodb+srv://deckdb:*****@cluster0-x95un.mongodb.net/eventsAPP_v2?retryWrites=true", { useNewUrlParser: true });
 //setup body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 //setup EJS

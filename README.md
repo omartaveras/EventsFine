@@ -25,6 +25,7 @@
 - Add description to our event model
 - Show db.collection.drop()
 - Add a show route/template
+- Connected Atlas MongoDB
 
 ###### Style
 * Create header and footer partials
