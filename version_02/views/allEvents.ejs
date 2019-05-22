@@ -23,11 +23,12 @@
                 <img src="<%= singlEvent.image %>" class="card-img-top img-thumbnail" alt="cover">
                 <div class="card-body">
                     <h5 class="card-title caption"><%= singlEvent.name %></h5>
-                    <p class="card-text"><%= singlEvent.date %></p>
+                    <p class="card-text"><%= singlEvent.description.substring(0,100) %></p>
+                    <p class="card-text"></p>
                     <a href="/allevents/<%= singlEvent._id %>" class="badge badge-primary">More Info</a>
                     <br>
                     <a href="" class="badge badge-light">Pryzm</a>
-                    <a class="badge badge-info">25 June 2019</a>
+                    <a class="badge badge-info"><%= singlEvent.date.toDateString() %></a>
                 </div>
             </div>
         </div>
