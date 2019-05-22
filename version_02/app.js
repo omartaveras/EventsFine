@@ -74,9 +74,16 @@ app.post("/allevents", (req, res) => {
     //Get data from form and add to all events in to array[allEvents]
     var name = req.body.name;
     var genre = req.body.genre;
+    var date = req.body.date;
     var desc = req.body.description;
     var image = req.body.image;
-    var newEvent = { name: name, genre: genre, description: desc, image: image }
+    var newEvent = { 
+        name: name, 
+        genre: genre, 
+        date: date, 
+        description: desc, 
+        image: image 
+    }
     //create a new Event and save to Db
     Event.create(newEvent, (err, newlyCreated) => {
         if (err) {

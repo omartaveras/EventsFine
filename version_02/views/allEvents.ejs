@@ -18,12 +18,12 @@
     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
         <% allEvents.forEach((singlEvent)=> { %>
         <div class="col-md-3 col-sm-6">
-            <div class="card style="width: 14rem;">
+            <div class="card style=" width: 14rem;">
                 <h7 class="card-title card-header"><%= singlEvent.genre %></h7>
                 <img src="<%= singlEvent.image %>" class="card-img-top img-thumbnail" alt="cover">
                 <div class="card-body">
                     <h5 class="card-title caption"><%= singlEvent.name %></h5>
-                    <p class="card-text">Description...</p>
+                    <p class="card-text"><%= singlEvent.date %></p>
                     <a href="/allevents/<%= singlEvent._id %>" class="badge badge-primary">More Info</a>
                     <br>
                     <a href="" class="badge badge-light">Pryzm</a>
