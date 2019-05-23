@@ -1,7 +1,7 @@
 const express = require("express"),
-    app = express(),
-    bodyParser = require("body-parser"),
-    mongoose = require("mongoose");
+          app = express(),
+   bodyParser = require("body-parser"),
+     mongoose = require("mongoose");
 
 
 // connect mongoDB with mongoose in Loacal
@@ -20,6 +20,9 @@ const eventSchema = new mongoose.Schema({
     genre: String,
     description: String,
     date: Date,
+    location: String,
+    city: String,
+    time: Number,
     image: String,
     created:  {type: Date, default: Date.now}
 });
@@ -75,13 +78,19 @@ app.post("/allevents", (req, res) => {
     //Get data from form and add to all events in to array[allEvents]
     var name = req.body.name;
     var genre = req.body.genre;
+    var location = req.body.location;
+    var city = req.body.city;
     var date = req.body.date;
-    var desc = req.body.description;
+    var time = req.body.time;
     var image = req.body.image;
+    var desc = req.body.description;
     var newEvent = { 
         name: name, 
-        genre: genre, 
-        date: date, 
+        genre: genre,
+        location: location,
+        city: city, 
+        date: date,
+        time: time, 
         description: desc, 
         image: image 
     }
