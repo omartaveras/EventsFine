@@ -20,7 +20,8 @@ const eventSchema = new mongoose.Schema({
     genre: String,
     description: String,
     date: Date,
-    image: String
+    image: String,
+    created:  {type: Date, default: Date.now}
 });
 const Event = mongoose.model("Event", eventSchema);
 

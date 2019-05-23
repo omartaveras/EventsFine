@@ -24,7 +24,8 @@
                 <div class="card-body">
                     <h5 class="card-title caption"><%= singlEvent.name %></h5>
                     <p class="card-text"><%= singlEvent.description.substring(0,100) %>...</p>
-                    <p class="card-text"></p>
+                    
+                    <p class="card-text"><small class="text-muted"><%= singlEvent.created.toDateString() %></small></p>
                     <a href="/allevents/<%= singlEvent._id %>" class="badge badge-primary">More Info</a>
                     <br>
                     <a href="" class="badge badge-light">Pryzm</a>
