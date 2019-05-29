@@ -2,7 +2,7 @@
 
 ## Find Internal Night Events 
 
-* In local machine
+* In Local Machine
 
 ********************************
 **          FINE              **
@@ -57,7 +57,7 @@
 > Koming Soon
 
 ## Step #2
-* Where is  the dir?
+* Where is the dir?
 * /home/user/app
 *********
 ####### Links
