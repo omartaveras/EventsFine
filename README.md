@@ -58,7 +58,7 @@
 
 ## Step #2
 * Where is  the dir?
-*
+* /home/user/app
 *********
 ####### Links
 - This formatting syntax: [GitHub Pages](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
