@@ -62,7 +62,7 @@
 *********
 ####### Links
 - This formatting syntax: [GitHub Pages](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
-https://help.github.com/en/articles/working-with-advanced-formatting
+* https://help.github.com/en/articles/working-with-advanced-formatting
  
 
 # How to start the server...
