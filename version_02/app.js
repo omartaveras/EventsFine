@@ -24,7 +24,7 @@ const eventSchema = new mongoose.Schema({
     date: Date,
     location: String,
     city: String,
-    time: { type: Date },
+    time: Number,
     image: String,
     created:  {type: Date, default: Date.now}
 });
@@ -115,7 +115,7 @@ app.get("/allevents/new", (req, res) => {
 // Show more info about one Event(Show.ejs)
 app.get("/allevents/:id", (req, res) => {
     //Find the event with provided ID
-    Event.findById(req.params.id, (err, foundEvent) => {
+    Event.findById(req.params.id, (err, foundEvent, time) => {
         if (err) {
             console.log(err);
         } else {
