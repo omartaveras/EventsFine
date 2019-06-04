@@ -10,7 +10,7 @@ const express = require("express"),
 mongoose.connect('mongodb://localhost/eventsAPP_v2', { useNewUrlParser: true });
 
 //Connection to Atlas MongoDB
-//mongoose.connect("mongodb+srv://deckdb:*****@cluster0-x95un.mongodb.net/eventsAPP_v2?retryWrites=true", { useNewUrlParser: true });
+//mongoose.connect("mongodb+srv://user:password@cluster0-x95un.mongodb.net/eventsAPP_v2?retryWrites=true", { useNewUrlParser: true });
 //setup body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 //setup EJS
@@ -24,7 +24,7 @@ const eventSchema = new mongoose.Schema({
     date: Date,
     location: String,
     city: String,
-    time: Number,
+    time: { type: Date },
     image: String,
     created:  {type: Date, default: Date.now}
 });
