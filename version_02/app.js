@@ -24,7 +24,7 @@ const eventSchema = new mongoose.Schema({
     date: Date,
     location: String,
     city: String,
-    time: Number,
+    time: String,
     image: String,
     created:  {type: Date, default: Date.now}
 });
