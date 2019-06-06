@@ -8,8 +8,8 @@
             <h1>This is FINE...</h1>
             <p>Welcome to Find Internal Nighht Event in your Town.</p>
             <p>
-                <a class="btn btn-info btn-lg" href="/allevents/new">Add New Event In Your Town!</a>
-                <a class="btn btn-warning" href="">Find Event in Town</a>
+                <a class="btn btn-info" href="/allevents/new">Ceate Event</a>
+                <a class="btn btn-warning" href="">Find Events </a>
             </p>
         </div>
     </header>
@@ -17,7 +17,32 @@
     <!-- List of Cards -->
     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
         <% allEvents.forEach((singlEvent)=> { %>
-        <div class="col-md-3 col-sm-6">
+            <!-- Caard one -->
+            <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                    <div class="card shadow">                           
+                        <img class="card-img-top" src="http://mtvmusicweek.co.uk/wp-content/uploads/2019/02/ytb3-768x432.jpg">
+                        <div class="card-img-overlay"><a href="#" class="badge badge-pill badge-secondary">Hip Hop</a></div>
+                        <div class="card-block">                            
+                            <figure class="profile">                                
+                                <img src="https://picsum.photos/200/150/?random" class="profile-avatar" alt="logo">                                
+                            </figure>
+                            <h4 class="card-title mt-3">Yo! MTV 30th</h4>
+                            <div class="meta">
+                                <i class="fas fa-map-marker-alt"><a href="#"> Crash Manor</a></i>
+                            </div>
+                            <div class="card-text">
+                                Short description ...
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <i class="far fa-calendar-alt">  <small>6 June 2019 - 23:00</small></i>
+                            <button class="btn btn-secondary float-right btn-sm">info</button>
+                        </div>
+                    </div>
+                </div>
+        
+            <!-- Old Card -->
+            <div class="col-md-3 col-sm-6">
             <div class="card style=" width: 18rem;">
                 <h7 class="card-title card-header"><%= singlEvent.genre %></h7>
                 <img src="<%= singlEvent.image %>" class="card-img-top img-thumbnail" alt="cover">
