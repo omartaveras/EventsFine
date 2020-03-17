@@ -1,11 +1,11 @@
-# F.I.N.E BETA_0.1
+# F.I.N.E BETA_0.2
 
 ## Find Internal Night Events 
 
 * In Local Machine
 
 ********************************
-**          FINE              **
+**          F.I.N.E           **
 ********************************
 
 
@@ -27,6 +27,9 @@
 - Add a show route/template
 - Connected Atlas MongoDB
 
+##### Step #3
+- No work
+
 ###### Style
 * Create header and footer partials
 * Add in Bootstrap
@@ -40,6 +43,8 @@
 - [x] Bootstrap
 - [ ] Semantic
 
+##### Style #3
+- React or Flutter
 
 ## Each Event has:(Example)
 * Name          "MegaBash 2030"
